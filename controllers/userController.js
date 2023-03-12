@@ -18,8 +18,8 @@ async function createStripeCheckoutSession(email) {
         line_items: lineItems,
         mode: 'subscription',
         customer_email: email,
-        success_url: "/login",
-        cancel_url: "/login"
+        success_url: "https://scary-hoodie-bass.cyclic.app/login",
+        cancel_url: "https://scary-hoodie-bass.cyclic.app/login"
     })
 
     return session;
