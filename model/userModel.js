@@ -32,7 +32,7 @@ userSchema.statics.signupStatic = async function (email, password) {
         throw new Error('Email already in use.');
     }
 
-    if (!validator.isStrongPassword(password)) throw new Error('Password must contain: atleast 8 characters, 1 lowercase, 1 uppercase, 1 number, and 1 symbol(.!- etc)');
+    if (!validator.isStrongPassword(password)) throw new Error('Password must contain atleast 8 characters, one lowercase letter, one uppercase letter, one number, and one symbol (such as .!-)');
 
 
     let salt = await bcrypt.genSalt(10);
