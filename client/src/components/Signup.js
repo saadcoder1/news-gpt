@@ -56,7 +56,9 @@ const Signup = () => {
                             <InputAdornment position="end" onClick={handleVisiblity} sx={{ cursor: "pointer" }}>
                                 {passwordVisibile ? <VisibilityIcon /> : <VisibilityOffIcon />}
                             </InputAdornment>
-                    }} sx={{ width: 280 }} value={formData.password} onChange={e => setFormData({ ...formData, password: e.target.value })} />
+                    }} sx={{ width: 280 }} value={formData.password} onChange={e => setFormData({ ...formData, password: e.target.value })}
+                        helperText='Password must contain atleast 8 characters, one lowercase letter, one uppercase letter, one number, and one symbol (such as .!-)'
+                    />
 
                     <Button disabled={loading} type="submit" variant="contained" size="large">Submit</Button>
                 </Stack>
